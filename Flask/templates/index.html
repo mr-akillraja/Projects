@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empolyer Details </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        form {
+            margin: 20px auto;
+            max-width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter ASSET ID</h1>
+    <form action="/search" method="POST">
+        <label for="passenger_id">Enter Passenger ID:</label>
+        <input type="text" name="passenger_id">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        p {
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Result</h1>
+    {% if passenger.empty %}
+        <p>No matching passenger found.</p>
+    {% else %}
+        <table>
+            <tr>
+                <th>SL:NO</th>
+                <th>ASSET ID</th>
+                <th>CATEGORY</CAnvas></th>
+                <th>MAKE</th>
+                <th>MODEL</th>
+                <th>SERIAL NUM</th>
+                <th>CONTACT NUM</th>
+                <th>DEPT</th>
+                <th>USER MAIL ID</th>
+                <th>AL RM MAIL ID</th>
+                <th>UPS ASSET ID</th>
+                <th>UPS MAKE</th>
+                <th>PRINTER ASSET ID</th>
+                <!-- Include other desired columns here -->
+            </tr>
+            <tr>
+                <td>{{ passenger['SL:NO'].values[0] }}</td>
+                <td>{{ passenger['ASSET ID'].values[0] }}</td>
+                <td>{{ passenger['CATEGORY'].values[0] }}</td>
+                <td>{{ passenger['MAKE'].values[0] }}</td>
+                <td>{{ passenger['MODEL'].values[0] }}</td>
+                <td>{{ passenger['SERIAL NUM'].values[0] }}</td>
+                <td>{{ passenger['CONTACT NUM'].values[0] }}</td>
+                <td>{{ passenger['LOCATION'].values[0] }}</td>
+                <td>{{ passenger['DEPT'].values[0] }}</td>
+                <td>{{ passenger['USER MAIL ID'].values[0] }}</td>
+                <td>{{ passenger['AL RM MAIL ID'].values[0] }}</td>
+                <td>{{ passenger['UPS ASSET ID'].values[0] }}</td>
+                <td>{{ passenger['UPS MAKE'].values[0] }}</td>
+                <td>{{ passenger['PRINTER ASSET ID'].values[0] }}</td>
+
+                <!-- Include other desired columns here -->
+            </tr>
+        </table>
+    {% endif %}
+</body>
+</html>
